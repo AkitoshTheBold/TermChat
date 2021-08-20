@@ -8,6 +8,13 @@
 <!-- - \let\itemize\compactitem -->
 <!-- --- -->
 
+# TermChat
+
+an attempt at a simple lightweight chat application for the terminal implemented in java
+
+current status (as of 2021-08-20):
+
+![](z.png)
 
 Client.java :
 
@@ -186,9 +193,3 @@ public class Server {
 	}
 }
 ```
-
-
-- output:
-
-![](z.png)
-
