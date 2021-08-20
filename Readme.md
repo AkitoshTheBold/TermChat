@@ -1,12 +1,12 @@
----
-title: 'Chat'
-author: 'Akansh Bharadwaj'
-header-includes:
-- \usepackage{setspace}
-- \singlespacing
-- \usepackage{paralist}
-- \let\itemize\compactitem
----
+<!-- --- -->
+<!-- title: 'TermChat' -->
+<!-- author: 'Akansh Bharadwaj' -->
+<!-- header-includes: -->
+<!-- - \usepackage{setspace} -->
+<!-- - \singlespacing -->
+<!-- - \usepackage{paralist} -->
+<!-- - \let\itemize\compactitem -->
+<!-- --- -->
 
 
 Client.java :
@@ -89,7 +89,7 @@ public class RecieveThread extends Thread {
 			}
 			System.out.print(CLR+"\033[k\n");
 			System.out.println(msg);
-			System.out.print(BLU+"> "+BG_BLU+WHT);
+			System.out.print(BLU+" "+BG_BLU+WHT);
 		}
 	}
 }
@@ -132,14 +132,14 @@ public class SendThread extends Thread {
 	}
 
 	public static String sendPad(String s) {
-		return "\033[k\n"+RED+"("+WHT+BG_RED+" "+s+" "+CLR+RED+")"+CLR;
+		return "\033[k\n"+RED+""+WHT+BG_RED+" "+s+" "+CLR+RED+""+CLR;
 	}
 
 	@Override
 	public void run () {
 		this.makeConnection();
 		while (true) {
-			System.out.print(BLU+"> "+BG_BLU+WHT);
+			System.out.print(BLU+" "+BG_BLU+WHT);
 			String str = in.nextLine();
 			System.out.print(CLR);
 			if (str.contains("/close")){
